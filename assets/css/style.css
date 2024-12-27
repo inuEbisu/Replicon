@@ -1,0 +1,551 @@
+/* ------------------------------------
+ * Typecho Replicon
+ *
+ * @author Typecho Team & Tribuarius
+ * @link https://github.com/inuEbisu/Replicon
+ * @update 2024-12-27
+ * --------------------------------- */
+
+/* ------------------
+ * Global style
+ * --------------- */
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+::selection{
+  color: #FFF;
+  background-color: #365CBB;
+}
+
+body {
+  background-color: #FFF;
+  color: #444;
+  font-family: var(--serif);
+  font-size: 100%;
+}
+
+p {
+  margin-block-start: 0.96em;
+  margin-block-end: 0.96em;
+}
+a {
+  color: #3354AA;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #444;
+}
+pre, code { 
+  background: #F8F8F8;
+  font-family: var(--code);
+  font-size: .92857em;
+}
+code { 
+  padding: 2px 4px; 
+  color: #B94A48; 
+}
+pre {
+  padding: 8px;
+  overflow: auto;
+  max-height: 500px;
+}
+pre code {
+  display: block;
+  padding: 3px 6px 2px 6px;
+  color: #444;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding-left: 1.5em;
+  border-left: 6px solid #eee;
+  color: #666;
+}
+
+table {
+  width: auto;
+  border-collapse: collapse;
+}
+table th, table td {
+  padding: 5px 10px;
+}
+table thead tr {
+  border-bottom: 1px solid #eee;
+}
+  
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--serif);
+  font-weight: bold;
+  scroll-margin-top: 0.75em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+textarea {
+  border: 1px solid #E9E9E9;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  padding: 5px 10px 5px 8px;
+  line-height: 1.4;
+}
+textarea {
+  resize: vertical;
+}
+
+
+/* Special link style */
+.post-meta a,
+.post-content a,
+.widget a,
+.comment-content a {
+  border-bottom: 1px solid #EEE;
+}
+
+.post-meta a:hover,
+.post-content a:hover,
+.widget a:hover,
+.comment-content a:hover {
+  border-bottom-color: transparent;
+}
+
+/* ------------------
+ * Header
+ * --------------- */
+
+#header {
+  padding-top: 40px;
+  border-bottom: 1px solid #EEE;
+}
+
+#logo {
+  color: #333;
+  font-size: 2.5em;
+}
+#logo img {
+  max-height: 64px;
+}
+
+.description {
+  margin: 0.6em 0 0.7em 0;
+  color: #999;
+}
+
+/* Navigation menu */
+#nav-menu {
+  margin: 25px 0 0;
+  padding: 0;
+}
+#nav-menu a {
+  display: block;
+  margin-right: -1px;
+  padding: 0 20px;
+  border: 1px solid #EEE;
+  border-bottom: none;
+  height: 32px;
+  line-height: 32px;
+  color: #444;
+  float: left;
+}
+#nav-menu a:hover,
+#nav-menu .current {
+  background: #F6F6F6;
+}
+
+/* Search */
+#search {
+  position: relative;
+  margin-top: 15px;
+}
+#search input {
+  padding-right: 30px;
+}
+#search button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent url(../img/icon-search.png) no-repeat center center;
+  direction: ltr; /* fix RTL language */
+  text-indent: -9999em;
+  cursor: pointer;
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+  #search button {
+    background-image: url(../img/icon-search@2x.png);
+    -webkit-background-size: 24px 24px;
+    -moz-background-size: 24px 24px;
+    -o-background-size: 24px 24px;
+    background-size: 24px 24px;
+  }
+}
+
+
+/* ------------------
+ * Main
+ * --------------- */
+
+.post {
+  padding: 15px 0 20px;
+  border-bottom: 1px solid #EEE;
+}
+.post-title {
+  margin: .83em 0 1em 0;
+  font-size: 1.4em;
+}
+.post-meta {
+  margin-top: -0.5em;
+  padding: 0;
+  color: #999;
+  font-size: .9em;
+}
+.post-meta li {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  padding-left: 12px;
+  border-left: 1px solid #EEE;
+}
+.post-meta li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  border: none;
+}
+.post-content {
+  line-height: 1.5;
+}
+.post .tags {
+  clear: both;
+}
+
+.post-near {
+  list-style: none;
+  margin: 30px 0;
+  padding: 0;
+  color: #999;
+}
+.post-near li {
+  margin: 10px 0;
+}
+
+.archive-title {
+  margin: 1em 0 -1em;
+  padding-top: 20px;
+  color: #999;
+  font-size: 1em;
+}
+.more {
+  text-align: center;
+}
+.more a {
+  border: none;
+}
+.protected .text {
+  width: 50%;
+}
+
+/* Page nav */
+
+.page-navigator {
+  list-style: none;
+  margin: 25px 0;
+  padding: 0;
+  text-align: center;
+}
+.page-navigator li {
+  display: inline-block;
+  margin: 0 4px;
+}
+.page-navigator a {
+  display: inline-block;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+}
+.page-navigator a:hover {
+  background: #EEE;
+  text-decoration: none;
+}
+
+.page-navigator .current a {
+  color: #444;
+  background: #EEE;
+}
+
+/* ------------------
+ * Comment list
+ * --------------- */
+#comments {
+  padding-top: 15px;
+}
+.comment-list, .comment-list ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.comment-list li {
+  padding: 14px;
+  margin-top: 10px;
+  border: 1px solid #EEE;
+}
+.comment-list li.comment-level-odd {
+  background: #F6F6F3;
+}
+.comment-list li.comment-level-even {
+  background: #FFF;
+}
+.comment-list li.comment-by-author {
+  background: #FFFEF5;
+}
+.comment-list li .comment-reply {
+  text-align: right;
+  font-size: .92857em;
+}
+.comment-meta a {
+  color: #999;
+  font-size: .92857em;
+}
+.comment-author {
+  display: block;
+  margin-bottom: 3px;
+  color: #444;
+}
+.comment-author .avatar {
+  float: left;
+  margin-right: 10px;
+  width: 2.5em;
+  height: 2.5em;
+}
+.comment-author cite {
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Comment reply */
+.comment-list .respond {
+  margin-top: 15px;
+  border-top: 1px solid #EEE;
+}
+.respond .cancel-comment-reply {
+  float: right;
+  margin-top: 15px;
+  font-size: .92857em;
+}
+#comment-form label {
+  display: block;
+  margin-bottom: .5em;
+  font-weight: bold;
+}
+#comment-form .required:after {
+  content: " *";
+  color: #C00;
+}
+
+#comments button {
+  padding: 9px 11px 9px 11px;
+  border: none;
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+#comments button:hover {
+  background-color: #d8d8d8;
+}
+
+/* ------------------
+ * secondary
+ * --------------- */
+#secondary {
+  padding-top: 15px;
+  word-wrap: break-word;
+}
+.widget {
+  margin-bottom: 30px;
+}
+.widget-list {
+  list-style: none;
+  padding: 0;
+}
+.widget-list ul {
+  padding-left: 1.25em;
+}
+.widget-list ul ul {
+  padding-left: 1.25em;
+}
+.widget-list li {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.widget-list li ul {
+  margin-left: 15px;
+}
+
+#sidebar-toc a {
+  border-bottom: none;
+}
+#sidebar-toc .widget-list {
+  list-style: initial;
+  padding-left: 0;
+}
+#secondary:has(#sidebar-toc) {
+  position: sticky;
+  top: 0;
+}
+
+/* ------------------
+ * Footer 
+ * --------------- */
+#footer {
+  padding: 3em 0;
+  line-height: 1.5;
+  text-align: center;
+  color: #999;
+}
+
+
+/* -----------------
+ * Error page
+ * -------------- */
+.error-page {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+/* -----------------
+ * Content format
+ *--------------- */
+.post-content, .comment-content {
+  line-height: 1.56;
+  word-wrap: break-word;
+}
+.post-content h2, .comment-content h2 {
+  font-size: 1.28571em;
+}
+.post-content img, .comment-content img,
+.post-content video, .comment-content video {
+  max-width: 100%;
+  box-shadow: 0 0 1.5rem #EEE;
+  margin: 15px 5px;
+}
+.post-content a img,
+.comment-content a img {
+  background: #FFF;
+  position: relative;
+  bottom: -4px;  /* hidden img parent link border  */
+}
+.post-content hr, .comment-content hr {
+  margin: 2em auto;
+  width: 100px;
+  border: 1px solid #E9E9E9;
+  border-width: 2px 0 0 0;
+}
+
+
+/* -----------------
+ * Misc
+ *--------------- */
+.aligncenter, div.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
+img.alignleft {
+  margin: 0 15px 0 0;
+}
+img.alignright {
+  margin: 0 0 0 15px;
+}
+
+/* -----------------
+ * Responsive
+ *--------------- */
+@media (max-width: 767px) {
+  body {
+    font-size: 87.5%;
+  }
+  #nav-menu a {
+    float: none;
+    display: inline-block;
+    margin: 0 -2px;
+  }
+  #main {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  #header,
+  .post-title,
+  .post-meta,
+  .archive-title {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 952px;
+  }
+}
+
+/*
+* Hide from both screenreaders and browsers: h5bp.com/u
+*/
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+* Hide only visually, but have it available for screenreaders: h5bp.com/v
+*/
+.sr-only {
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+* Extends the .sr-only class to allow the element to be focusable
+* when navigated to via the keyboard: h5bp.com/p
+*/
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+* Hide visually and from screenreaders, but maintain layout
+*/
+.invisible {
+  visibility: hidden; }

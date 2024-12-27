@@ -1,0 +1,9 @@
+.cjk-latin-auto-space {
+    display: inline-block;
+    width: 0.167em;
+}
+
+.cjk-latin-custom-space {
+    display: inline-block;
+    width: 0.2em;
+}

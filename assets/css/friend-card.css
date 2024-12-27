@@ -1,0 +1,48 @@
+/* -----------------
+ * Friend Card
+ *--------------- */
+
+.friend-container {
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px; /* 卡片间距 */
+}
+
+.friend-container .friend-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #EEE;
+  padding: 0.8em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.friend-container .friend-card:hover {
+  border-bottom-color: #EEE;
+}
+
+.friend-container .friend-card .friend-avatar {
+  width: 3.2em;
+  height: 3.2em;
+  bottom: 0;
+  margin: 0 0.6em 0 0;
+  box-shadow: none;
+}
+
+.friend-container .friend-card .friend-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.friend-container .friend-card .friend-name {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.friend-container .friend-card .friend-description {
+  font-size: 0.9em;
+  color: #999;
+  margin: 1px 0 0 0;
+}

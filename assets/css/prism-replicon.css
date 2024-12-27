@@ -1,0 +1,89 @@
+/**
+ * PrismJS - Replicon Override
+ * Based on prism.js Coy theme.
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: var(--prism-code);
+}
+
+/* Code blocks */
+
+pre[class*="language-"] > code {
+	border-left: 10px solid #eee;
+	box-shadow: -1px 0px 0px 0px #eee, 0px 0px 0px 1px #eee;
+	background-color: #ffffff;
+	background-image: linear-gradient(transparent 50%, #f8f8f8 50%);
+}
+
+/* Inline code */
+
+:not(pre) > code[class*="language-"] {
+	color: #b94a48;
+}
+
+/* Decoration */
+
+pre[class*="language-"]:before,
+pre[class*="language-"]:after {
+    display: none !important;
+}
+
+/* Tokens */
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #b94a48;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+	color: #a67f59;
+	background: none;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+	color: #365cbb;
+}
+
+.language-css .token.string,
+.style .token.string {
+	color: #b94a48;
+	background: none;
+}
+
+/* Toolbar */
+
+div.code-toolbar > .toolbar {
+    transition: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+	font-size: 0.87em;
+	padding: 2px .5em;
+	margin-top: 4px;
+	margin-right: 4px;
+	background: white;
+	box-shadow: 0 0 7px #e8e8e8;
+	border-radius: 0;
+}
+
+/* Line-numbers */
+
+.line-numbers .line-numbers-rows {
+	border-right: 0;
+}

@@ -1,0 +1,47 @@
+/* -----------------
+ * Print
+ *--------------- */
+
+@media print {
+  #header,
+  #comments,
+  #copyright,
+  #beian,
+  #secondary {
+    display: none !important;
+  }
+  #main {
+    width: 100% !important;
+  }
+  .post-title {
+    margin: 0.17em 0 .85em 0;
+    font-size: 1.6em;
+  }
+  .post-meta {
+    margin-bottom: 2.5em;
+  }
+  .post-title a,
+  .post-meta a {
+    display: contents !important; /* 去掉 title 和 meta 里的超链接 */
+  }
+  div.code-toolbar > .toolbar {
+    display: none !important;
+  }
+
+  /* Page break */
+  /* Including some bug fixes... */
+  pre {
+    overflow: visible !important;
+    max-height: none !important;
+  }
+  pre, code {
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+  .line-numbers-rows {
+    display: none !important;
+  }
+  pre[class*=language-].line-numbers.line-numbers code {
+    padding-left: 1em !important;
+  }
+}
