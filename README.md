@@ -1,5 +1,5 @@
 # Replicon
-Replicon 是一款基于 Typecho 默认主题 Replica 开发的博客主题。设计中融入了犬戎个人的审美偏好，希望能在简约现代的基础上提升阅读体验。
+Replicon 是一款基于 Typecho 默认主题 [Replica](https://github.com/typecho/typecho/tree/master/usr/themes/default) 开发的博客主题。设计中融入了犬戎个人的审美偏好，希望能在简约现代的基础上提升阅读体验。
 
 目前正在犬戎的狗窝 [犬窝闲谭](https://inuebisu.cn) 上运行。
 
