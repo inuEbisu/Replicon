@@ -377,9 +377,15 @@ textarea {
   padding: 0;
 }
 .widget-list ul {
+  list-style: none;
   padding-left: 1.25em;
 }
 .widget-list ul ul {
+  list-style: none;
+  padding-left: 1.25em;
+}
+.widget-list ul ul ul {
+  list-style: none;
   padding-left: 1.25em;
 }
 .widget-list li {
@@ -394,10 +400,7 @@ textarea {
 #sidebar-toc a {
   border-bottom: none;
 }
-#sidebar-toc .widget-list {
-  list-style: initial;
-  padding-left: 0;
-}
+
 #secondary:has(#sidebar-toc) {
   position: sticky;
   top: 0;
