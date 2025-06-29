@@ -17,7 +17,7 @@ Replicon 是一款基于 Typecho 默认主题 [Replica](https://github.com/typec
   <tbody>
     <tr>
       <td><b>衬线字体</b></td>
-      <td>Source Serif 4</td>
+      <td>Noto Serif SC</td>
       <td>Noto Serif SC</td>
     </tr>
     <tr>

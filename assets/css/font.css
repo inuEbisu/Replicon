@@ -1,7 +1,7 @@
 /* ------------------
  * Font
  * --------------- */
-@import url(https://fonts.loli.net/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=Noto+Serif+SC:wght@400;700&display=swap);
+@import url(https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;700&display=swap);
 @font-face {
   font-family: "JetBrains Mono NL";
   font-display: swap;
@@ -19,7 +19,7 @@
 }
 
 :root {
-  --serif: "Source Serif 4", "Noto Serif SC", serif;
+  --serif: "Noto Serif SC", serif;
   --code: "JetBrains Mono NL", Consolas, Monaco, "LXGW Wenkai Screen", "Lucida Console", "Courier New", monospace;
   --prism-code: Consolas, Monaco, "LXGW Wenkai Screen", "Lucida Console", "Courier New", monospace;
 }
