@@ -27,7 +27,7 @@ Replicon 是一款基于 Typecho 默认主题 [Replica](https://github.com/typec
     </tr>
     <tr>
       <td><b>代码块字体</b></td>
-      <td>Consolas</td>
+      <td>JetBrains Mono NL</td>
       <td>霞鹜文楷屏幕阅读版</td>
     </tr>
   </tbody>
