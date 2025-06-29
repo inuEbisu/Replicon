@@ -6,16 +6,60 @@
   font-family: "JetBrains Mono NL";
   font-display: swap;
   src:
-    url("../fonts/JetBrainsMonoNL/JetBrainsMonoNL-Regular.ttf") format("ttf"),
-    url("../fonts/JetBrainsMonoNL/JetBrainsMonoNL-Italic.ttf") format("ttf"),
-    url("../fonts/JetBrainsMonoNL/JetBrainsMonoNL-Bold.ttf") format("ttf"),
-    url("../fonts/JetBrainsMonoNL/JetBrainsMonoNL-BoldItalic.ttf") format("ttf");
+    local("JetBrains Mono NL"),
+    local("JetBrainsMonoNL"),
+    local("JetBrainsMono NL"),
+    local("JetBrains Mono NL Regular"),
+    url("../fonts/JetBrainsMonoNL/JetBrainsMonoNL-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrains Mono NL";
+  font-display: swap;
+  src:
+    local("JetBrains Mono NL"),
+    local("JetBrainsMonoNL"),
+    local("JetBrainsMono NL"),
+    local("JetBrains Mono NL Regular Italic"),
+    url("../fonts/JetBrainsMonoNL/JetBrainsMonoNL-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "JetBrains Mono NL";
+  font-display: swap;
+  src:
+    local("JetBrains Mono NL"),
+    local("JetBrainsMonoNL"),
+    local("JetBrainsMono NL"),
+    local("JetBrains Mono NL Bold"),
+    url("../fonts/JetBrainsMonoNL/JetBrainsMonoNL-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrains Mono NL";
+  font-display: swap;
+  src:
+    local("JetBrains Mono NL"),
+    local("JetBrainsMonoNL"),
+    local("JetBrainsMono NL"),
+    local("JetBrains Mono NL Bold Italic"),
+    url("../fonts/JetBrainsMonoNL/JetBrainsMonoNL-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
 }
 @font-face {
   font-family: "LXGW Wenkai Screen";
   font-display: swap;
   src:
-    url("../fonts/LXGWWenKaiScreen/LXGWWenKaiScreen.ttf") format("ttf");
+    local("LXGW Wenkai Screen"),
+    local("LXGWWenKaiScreen"),
+    local("霞鹜文楷屏幕阅读版"),
+    url("../fonts/LXGWWenKaiScreen/LXGWWenKaiScreen.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 :root {
