@@ -6,6 +6,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
     font-family: var(--prism-code);
+	font-size: .92em;
 }
 
 /* Code blocks */

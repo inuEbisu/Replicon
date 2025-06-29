@@ -65,5 +65,5 @@
 :root {
   --serif: "Noto Serif SC", serif;
   --code: "JetBrains Mono NL", Consolas, Monaco, "LXGW Wenkai Screen", "Lucida Console", "Courier New", monospace;
-  --prism-code: Consolas, Monaco, "LXGW Wenkai Screen", "Lucida Console", "Courier New", monospace;
+  --prism-code: "JetBrains Mono NL", Consolas, Monaco, "LXGW Wenkai Screen", "Lucida Console", "Courier New", monospace;
 }
