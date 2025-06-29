@@ -33,6 +33,14 @@ Replicon 是一款基于 Typecho 默认主题 [Replica](https://github.com/typec
   </tbody>
 </table>
 
+> 为什么本地托管 `JetBrains Mono NL` 和 `霞鹜文楷屏幕阅读版` 两个字体？
+
+我搜寻互联网，没有找到它们的 CDN。:(
+
+（不过如果去掉「NL」以及「屏幕阅读版」的话就有了。不过个人偏好是无法忍受 coding 字体中使用 ligature 特性，以及屏幕阅读版的字重更适合。）
+
+总而言之，如果有能用的，请告诉我！
+
 ### 手 K 样式参数
 
 为每个细节精心优化，确保整体风格协调统一。
