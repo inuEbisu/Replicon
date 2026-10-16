@@ -490,6 +490,10 @@ img.alignright {
   #nav-menu a {
     float: none;
     display: inline-block;
+	/* 移动端使用行内块居中导航；空标题链接没有文字基线，默认会按底边
+	对齐，因而比有文字的链接向上凸出。统一顶部对齐，兼容空标题和仅含空
+	格的导航项；此规则仅作用于移动端，不改变桌面端的浮动布局。 */
+	vertical-align: top;
     margin: 0 -2px;
   }
   #main {
