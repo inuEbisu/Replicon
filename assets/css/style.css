@@ -490,7 +490,7 @@ img.alignright {
   #nav-menu a {
     float: none;
     display: inline-block;
-	  vertical-align: top;
+    vertical-align: top;
     margin: 0 -2px;
   }
   #main {
